@@ -1,10 +1,10 @@
 import urllib
 from BeautifulSoup import *
 
-url = raw_input("Enter url:")
-count = raw_input("Enter count:")
+url = raw_input('Enter url:')
+count = raw_input('Enter count:')
 count = int(count)
-position = raw_input("Enter position:")
+position = raw_input('Enter position:')
 position = int(position)
 
 while count > 0:
@@ -15,8 +15,7 @@ while count > 0:
     for t in tags:
         linklist.append(t.get('href', None))
     url = linklist[position]
-    print url
     count -= 1
     del linklist[:]
 
-print "The last url is", url
+print 'The last url is', url
